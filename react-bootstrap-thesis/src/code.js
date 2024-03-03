@@ -1,3 +1,5 @@
+
+//FOR VALIDATION
 (function () {
   'use strict';
 
@@ -41,4 +43,27 @@
         }
       });
     });
+  });
+
+
+  
+  //FOR DASHBOARD 
+
+  // Get all tab links and tab content elements
+  const tabLinks = document.querySelectorAll('.nav-link');
+  const tabContents = document.querySelectorAll('.tab-pane');
+
+  // Add click event listener to each tab link
+  tabLinks.forEach(link => {
+      link.addEventListener('click', () => {
+          // Hide all tab contents
+          tabContents.forEach(content => {
+              content.classList.remove('show', 'active');
+          });
+
+          // Show the corresponding tab content
+          const targetId = link.getAttribute('data-bs-target').slice(1); // Get target ID without '#'
+          const targetContent = document.getElementById(targetId);
+          targetContent.classList.add('show', 'active');
+      });
   });
