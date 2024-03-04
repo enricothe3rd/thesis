@@ -67,3 +67,12 @@
           targetContent.classList.add('show', 'active');
       });
   });
+
+  window.addEventListener('resize', function() {
+    var containerDiv = document.getElementById('responsive-container');
+    if (window.innerWidth > 576) {
+        containerDiv.classList.add('container');
+    } else {
+        containerDiv.classList.remove('container');
+    }
+});
