@@ -12,7 +12,7 @@
 </head>
 <style>
   *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
   }
     .container { 
         display: flex;
@@ -90,7 +90,12 @@
     background-color: #003e29;
   }
 body{
-    /* padding: 4rem 0; */
+  /* background-color: #011f15; */
+}
+.form{
+  background-color:#003e29;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
 }
 </style>
 <div class="d-flex">
@@ -104,11 +109,12 @@ body{
 
 
 <div class="container">
-  <form class="row-1 g-4 mx-auto needs-validation" novalidate>
+  <form class="row-1 g-4 mx-auto needs-validation form" novalidate>
     <div class="text-center">
-      <img class="" width="50%" src="../public/jsmjc.png" class="rounded" alt="...">
+      <img class="" width="30%" src="../public/jsmjc.png" class="rounded" alt="...">
       <!-- <img class="" width="100%" src="logo.svg" class="rounded" alt="..."> -->
     </div>
+    <div class="float-end text-light fw-bolder"><h3>Sign Up</h3></div>
     <div class="col mt-4">
       <div class="input-group has-validation">
         <span class="input-group-text me-1 main-color" id="icons" style="height:58px;"><i class="fa-regular fa-user"></i></span>
@@ -163,19 +169,28 @@ body{
         <option value="cashier">Cashier</option>
       </select>
       
+      <style>
+        .forger:hover {
+          color: rgb(221, 221, 221) !important; /* Change to the desired color */
+        }
+      </style>
+<div class="d-flex justify-content-between mt-4">
+  <div class="form-check">
+    <input class="form-check-input bg-success" type="checkbox" value="" id="invalidCheck" required>
+    <label class="form-check-label text-light" for="invalidCheck">
+      Agree to terms and conditions
+    </label>
+    <div class="invalid-feedback br">You must agree to the terms and conditions before submitting.</div>
+  </div>
+  <div>
+    <a href="#" class="forger text-light text-decoration-none ">Forget Password</a>
+  </div>
+</div>
+<div class="col-12 mt-3">
+  <button class="btn main-color text-bg-success mb-2" style="width: 100%;" type="submit">Sign up</button>
+</div>
 
-      <div class="form-check mt-3">
-        <input class="form-check-input bg-sucess" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          Agree to terms and conditions
-        </label>
-        <div class="invalid-feedback">You must agree to the terms and conditions before submitting.</div>
-      </div>
-
-      <div class="col-12 mt-3">
-        <button class="btn main-color" id="icons" type="submit">Log in</button>
-      </div>
-    </div>
+      
   </form>
 </div>
 
