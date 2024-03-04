@@ -70,7 +70,7 @@
 
   window.addEventListener('resize', function() {
     var containerDiv = document.getElementById('responsive-container');
-    if (window.innerWidth >= 576) {
+    if (window.innerWidth >= 600) {
         containerDiv.classList.remove('container');
     } else {
         containerDiv.classList.add('container');
