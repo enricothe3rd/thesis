@@ -109,3 +109,24 @@ function suffixValidation() {
     }, false)
   })
 })()
+
+//FOR STUDENT BIRTH DATE
+
+// Populate the Date dropdown
+var dateDropdown = document.getElementById("date");
+for (var i = 1; i <= 31; i++) {
+  var option = document.createElement("option");
+  option.text = i;
+  option.value = i;
+  dateDropdown.add(option);
+}
+
+      // Populate the Year dropdown
+var yearDropdown = document.getElementById("year");
+var currentYear = new Date().getFullYear();
+for (var i = 1900; i <= currentYear; i++) {
+  var option = document.createElement("option");
+  option.text = i;
+  option.value = i;
+  yearDropdown.add(option);
+}

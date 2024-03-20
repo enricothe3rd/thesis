@@ -28,7 +28,7 @@
     <div class="row">
       <div class="col">
         <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action " id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+          <a class="list-group-item list-group-item-action " id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Basic information</a>
         </div>
       </div>
     </div>
@@ -87,6 +87,7 @@
                     Please choose a sex.
                   </div>
                 </div>
+                
                 
                 
                 <div class="col-md-4">
@@ -151,7 +152,7 @@
     <div class="row">
       <div class="col">
         <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Academic background</a>
         </div>
       </div>
     </div>
@@ -269,6 +270,174 @@
     </div>
   </div>
  
+
+
+
+
+  <div class="container">
+    <form class="row g-3 m-4 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="validationFirstName" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationFirstName" value="Mark" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationMiddleName" class="form-label">Middle name (optional)</label>
+        <input type="text" class="form-control" id="validationMiddleName" value="Otto" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationLastName" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationLastName" value="Otto" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-lg-2 col-md-3">
+          <label for="validationSuffix" class="form-label">Suffix (optional)</label>
+          <select id="validationSuffix" class="form-select" aria-label="Default select example" required>
+            <option selected disabled hidden></option>
+            <option value="1">Jr</option>
+            <option value="2">Sr</option>
+            <option value="3">II</option>
+            <option value="4">III</option>
+          </select>
+          <div class="invalid-feedback">
+            Please choose a suffix.
+          </div>
+        </div>
+      
+        <div class="col-md-2">
+          <label for="validationGender" class="form-label">Gender</label>
+          <select id="validationGender" class="form-select" aria-label="Default select example" required>
+            <option selected disabled hidden></option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other/Non-binary</option>
+            <option value="4">Prefer not to say</option>
+          </select>
+          <div class="invalid-feedback">
+            Please choose a gender.
+          </div>
+        </div>
+      
+        <div class="col-lg-8 col-md-7">
+          <label for="validationAge" class="form-label">Birth date</label>
+          <div class="row">
+            <div class="col-md-4">
+              <select class="form-select" aria-label="Default select example" id="date" required>
+                <option value="">Select Date</option>
+                <!-- Add your date options here -->
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid date.
+              </div>
+            </div>
+        
+            <div class="col-md-4">
+              <select class="form-select" aria-label="Default select example" id="month" required>
+                <option value="">Select Month</option>
+                  <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid month.
+              </div>
+            </div>
+        
+            <div class="col-md-4">
+              <select class="form-select" aria-label="Default select example" id="year" required>
+                <option value="">Select Year</option>
+                <!-- Add your year options here -->
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid year.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div> -->
+      <div class="col-md-11">
+        <label for="validationStreetAddress" class="form-label">Street Address</label>
+        <input type="text" class="form-control" id="validationStreetAddress" required>
+        <div class="invalid-feedback">
+          Please provide a Street Address.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="validationCity" required>
+        <div class="invalid-feedback">
+          Please provide a valid City.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationStateProvince" class="form-label">State / Province</label>
+        <input type="text" class="form-control" id="validationStateProvince" required>
+        <div class="invalid-feedback">
+          Please provide a valid State / Province.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>...</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+  </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Get all list items
