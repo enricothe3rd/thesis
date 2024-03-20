@@ -18,6 +18,7 @@
     });
 })();
 
+//FOR LOG-IN
 
   // Wait for the DOM to be fully loaded
   document.addEventListener("DOMContentLoaded", function() {
@@ -76,3 +77,35 @@
         containerDiv.classList.remove('container');
     }
 });
+
+//FOR STUDENT REGISTRATION
+function suffixValidation() {
+  var suffixSelect = document.getElementById('validationStudent-suffix');
+  if (suffixSelect.value == null || suffixSelect.value == "") {
+    suffixSelect.classList.add('is-invalid');
+    return false;
+  } else {
+    suffixSelect.classList.remove('is-invalid');
+    return true;
+  }
+}
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
