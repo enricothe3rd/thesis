@@ -21,7 +21,7 @@
 
 </style>
 <body>
-  <div class="container">
+  <div class="container mt-5 pb-4">
     STUDENT REGISTRATION FORM
     <div class="row">
       <div class="col">
@@ -36,26 +36,26 @@
           <div class="tab-pane fade " id="list-home" role="tabpanel" aria-labelledby="list-home-list">
 <!-- START OF BASIC INFORMATION FORM -->
             <div class="container">
-              <form class="row g-3 m-4 needs-validation" novalidate>
+              <form id="form1" class="row g-3 m-4 needs-validation" novalidate>
                 <div class="col-md-4">
                   <label for="studentFirstName" class="form-label">First name</label>
                   <input type="text" class="form-control" id="studentFirstName" value="" required>
-                  <div class="valid-feedback">
-                    Looks good!
+                  <div class="invalid-feedback">
+                    Please provide a first name.
                   </div>
                 </div>
                 <div class="col-md-4">
                   <label for="studentMiddleName" class="form-label">Middle name (optional)</label>
                   <input type="text" class="form-control" id="studentMiddleName" value="" required>
-                  <div class="valid-feedback">
-                    Looks good!
+                  <div class="invalid-feedback">
+                    Please provide a middle name.
                   </div>
                 </div>
                 <div class="col-md-4">
                   <label for="studentLastName" class="form-label">Last name</label>
                   <input type="text" class="form-control" id="studentLastName" value="" required>
-                  <div class="valid-feedback">
-                    Looks good!
+                  <div class="invalid-feedback">
+                    Please provide a last name.
                   </div>
                 </div>
                 <div class="row mt-2">
@@ -291,7 +291,7 @@
                     Please provide a valid email example@example.com.
                   </div>
                 </div>
-
+              </form>
               </div>
           </div>
         </div>
@@ -300,133 +300,432 @@
 <!-- END OF BASIC INFORMATION FORM -->
   
 <!-- START OF ACADEMIC BACKGROUND FORM -->
-    <div class="row">
-      <div class="col">
-        <div class="list-group" id="list-tab" role="tablist">
-          <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Academic background</a>
-        </div>
-      </div>
+<div class="row pt-2">
+  <div class="col">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action " id="list-academic-list" data-bs-toggle="list" href="#list-academic" role="tab" aria-controls="list-academic">Academic background</a>
     </div>
-    <div class="row">
-      <div class="col" id="gone2">
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-
-            <div class="container">
-              <form class="row g-3 m-4 needs-validation" novalidate>
-                <div class="col-md-4">
-                  <label for="validationFirstName" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="validationFirstName" value="Mark" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationMiddleName" class="form-label">Middle name (optional)</label>
-                  <input type="text" class="form-control" id="validationMiddleName" value="Otto" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <label for="validationLastName" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="validationLastName" value="Otto" required>
-                  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-3">
-                  <label for="validationSuffix" class="form-label">Suffix (optional)</label>
-                  <select id="validationSuffix" class="form-select" aria-label="Default select example" required>
-                    <option selected disabled hidden></option>
-                    <option value="1">Jr</option>
-                    <option value="2">Sr</option>
-                    <option value="3">II</option>
-                    <option value="3">II</option>
-                    <option value="3">III</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please choose a suffix.
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <label for="validationGender" class="form-label">Gender</label>
-                  <select id="validationGender" class="form-select" aria-label="Default select example" required>
-                    <option selected disabled hidden></option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                    <option value="3">Other/Non-binary</option>
-                    <option value="3">Prefer not to say</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please choose a sex.
-                  </div>
-                </div>
-                
-                
-                <div class="col-md-4">
-                  <label for="validationCustomUsername" class="form-label">Username</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                      Please choose a username.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label">City</label>
-                  <input type="text" class="form-control" id="validationCustom03" required>
-                  <div class="invalid-feedback">
-                    Please provide a valid city.
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom04" class="form-label">State</label>
-                  <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>...</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please select a valid state.
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <label for="validationCustom05" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="validationCustom05" required>
-                  <div class="invalid-feedback">
-                    Please provide a valid zip.
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                      Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                      You must agree before submitting.
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
-              </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col" id="gone2">
+    <div class="tab-content" id="nav-tabContent1">
+      <div class="tab-pane fade " id="list-academic" role="tabpanel" aria-labelledby="list-academic-list">
+        <div class="container">
+          <form id="form2" class="row g-3 m-4">
+            <!-- START OF PRESCHOOL INFORMATION -->
+            <label for="">Preschool</label>
+            <div class="col-md-12">
+              <label for="preSchoolName" class="form-label">School Name</label>
+              <input type="text" class="form-control" id="preSchoolName" value="" required>
+              <div class="invalid-feedback">
+                Please provide a school name.
+              </div>
             </div>
-
+            <div class="col-md-4">
+              <label for="preSchoolCompletion" class="form-label">Year of Completion</label>
+              <input type="text" class="form-control" id="preSchoolCompletion" value="" required>
+              <div class="invalid-feedback">
+                Please provide a year of completion.
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="preSchoolAcademicAchievements" class="form-label">Academic Achievements or Awards (if applicable)</label>
+              <input type="text" class="form-control" id="preSchoolAcademicAchievements" value="" required>
+              <div class="invalid-feedback">
+                Please provide academic achievements or write N/A if not applicable.
+              </div>
+            </div>
+            <!-- END OF PRESCHOOL INFORMATION -->
+        
+            <!-- HIGH SCHOOL INFORMATION -->
+            <label for="">High school</label>
+            <div class="col-md-12">
+              <label for="highSchoolName" class="form-label">School Name</label>
+              <input type="text" class="form-control" id="highSchoolName" value="" required>
+              <div class="invalid-feedback">
+                Please provide a school name.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="highSchoolCompletion" class="form-label">Year of Completion</label>
+              <input type="text" class="form-control" id="highSchoolCompletion" value="" required>
+              <div class="invalid-feedback">
+                Please provide a year of completion.
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="highSchoolAcademicAchievements" class="form-label">Academic Achievements or Awards (if applicable)</label>
+              <input type="text" class="form-control" id="highSchoolAcademicAchievements" value="" required>
+              <div class="invalid-feedback">
+                Please provide academic achievements or write N/A if not applicable.
+              </div>
+            </div>
+            <!-- END OF HIGH SCHOOL INFORMATION -->
+        
+            <!-- START OF SENIOR  HIGH SCHOOL INFORMATION -->
+            <label for="">Senior high school</label>
+            <div class="col-md-12">
+              <label for="seniorHighSchoolName" class="form-label">School Name</label>
+              <input type="text" class="form-control" id="seniorHighSchoolName" value="" required>
+              <div class="invalid-feedback">
+                Please provide a school name.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="seniorHighSchoolCompletion" class="form-label">Year of Completion</label>
+              <input type="text" class="form-control" id="seniorHighSchoolCompletion" value="" required>
+              <div class="invalid-feedback">
+                Please provide a year of completion.
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="seniorHighSchoolAcademicAchievements" class="form-label">Academic Achievements or Awards (if applicable)</label>
+              <input type="text" class="form-control" id="seniorHighSchoolAcademicAchievements" value="" required>
+              <div class="invalid-feedback">
+                Please provide academic achievements or write N/A if not applicable.
+              </div>
+            </div>
+            <div class="col-md-8">
+              <label for="studentExtraCurricular" class="form-label">Other Extra Curricular Activities</label>
+              <input type="text" class="form-control" id="studentExtraCurricular" value="" required>
+              <div class="invalid-feedback">
+                Please provide other extra curricualar activities else N/A.
+              </div>
+            </div>
+                <!-- END OF SENIOR  HIGH SCHOOL INFORMATION -->
+        
+                <!-- START CSS FOR EXTRA CURRICULAR PARTICIPATION AND RADIO BUTTON -->
+            <style>
+              #extraCurricularParticipation{
+                border-color: rgb(204, 201, 201) !important;
+              }
+              .form-check-label{
+                color: black !important; 
+              }
+              #interestInput,#radioYes,#radioNo,#radioYes1,#radioNo1{
+                border-color: rgb(204, 201, 201) !important;
+              }
+            </style>
+                <!-- END CSS FOR EXTRA CURRICULAR PARTICIPATION AND RADIO BUTTON -->
+        
+        <!-- START OF Extra Curricular Participation -->
+            <label for="">Extra Curricular Participation</label>
+            <div class="row pt-2">
+              <div class="col-md-4">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+              <label class="form-check-label" for="extraCurricularParticipation">Student Council</label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+              <label class="form-check-label" for="extraCurricularParticipation">Club/Organization</label>
+            </div>
           </div>
         </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Class Officer</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Varsity Player</label>
+        </div>
+        </div>
+        </div>
+        <label for="">Other Extra Curricular Participation</label>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Acting</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Arts/Crafts</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Calculating</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Dancing</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Debating</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Drawing</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Eating</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Fashion</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Photography</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Playing drums</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Playing guitar</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Playing piano</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Programming</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Singing</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Writing</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Others (specify below)</label>
+        </div>
+        </div>
+        </div>
+        <label for="">Sports</label>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Badminton</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Basketball</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Bowling</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Chess</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Frisbee</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Scrabble</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Soccer</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Softball</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Swimming</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Table Tennis</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Track and field</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Tennis</label>
+        </div>
+        </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">VolleyBall</label>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="extraCurricularParticipation">
+          <label class="form-check-label" for="extraCurricularParticipation">Others (specify below)</label>
+        </div>
+        </div>
+        </div>
+        <label for="">Interests</label>
+        <div class="input-group">
+          <textarea class="form-control" aria-label="Wide textarea" id="interestInput"></textarea>
+        </div>
+        <!-- END OF Extra Curricular Participation -->
+        
+        <!-- START FAMILY INCOME -->
+        <div class="col-md-4">
+          <label for="studentFamilyIncome" class="form-label">Estimate Your Family Monthly Income</label>
+          <select id="studentFamilyIncome" class="form-select" aria-label="Default select example" required>
+            <option selected disabled hidden></option>
+            <option value="1">₱ 20,000 and below</option>
+            <option value="2">₱  21,000 - ₱  40,000</option>
+            <option value="3">₱  41,000 - ₱  60,000</option>
+            <option value="4">₱  61,000 - ₱  80,000</option>
+            <option value="4">₱  81,000 and above</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select your family monthly income.
+          </div>
+        </div>
+        <!-- END FAMILY INCOME -->
+        
+        <!-- START SCHOLARSHIP -->
+        <label for="">Do You Have Any Scholarship?</label>
+        <div class="row pt-2">
+          <div class="col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioYes">
+            <label class="form-check-label" for="radioYes">Yes</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNo">
+            <label class="form-check-label" for="radioNo">No</label>
+          </div>
+        </div>
+        <!-- END OF START SCHOLARSHIP -->
+        
+        <!-- START OF PLAN TO SHIFT ANOTHER STRAND -->
+        <label for="">Do You Plan To Shift To Another Strand?</label>
+        <div class="row pt-2">
+          <div class="col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="radioYes1">
+            <label class="form-check-label" for="radioYes1">Yes</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="radioNo1">
+            <label class="form-check-label" for="radioNo1">No</label>
+          </div>
+        </div>
+        <!-- END OF PLAN TO SHIFT ANOTHER STRAND -->
+        
+        <!-- START OF STRAND CHOICES -->
+        <div class="col-md-7">
+          <label for="studentFamilyIncome" class="form-label">Select SHS Strand</label>
+          <select id="studentFamilyIncome" class="form-select" aria-label="Default select example" required>
+            <option selected disabled hidden></option>
+            <option value="STEM">Science, Technology, Engineering, and Mathematics (STEM)</option>
+            <option value="ABM">Accountancy, Business, and Management (ABM)</option>
+            <option value="HUMSS">Humanities and Social Sciences (HUMSS)</option>
+            <option value="GAS">General Academic Strand (GAS)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select  shs strand.
+          </div>
+        </div>
+        <!-- END OF STRAND CHOICES -->
+        </form>
       </div>
     </div>
-  <!-- </div> -->
- 
-
-
-
-
+  </div>
+</div>
+<!-- END OF ACADEMIC BACKGROUND FORM -->
 
 <!-- SUMMITING AND TERMS AND CONDITIONS -->
+
       <div class="col-12 pt-4">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -439,11 +738,10 @@
         </div>
       </div>
       <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
+      <button id="submitBothForms" class="btn btn-primary">Submit Registration</button>
       </div>
-    </form>
   </div>
-</div>
+
 </body>
 <script src="code.js"></script>
 </html>

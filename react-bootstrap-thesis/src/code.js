@@ -3,20 +3,34 @@
 (function () {
   'use strict';
 
-  var forms = document.querySelectorAll('.needs-validation');
+  var submitButton = document.getElementById('submitBothForms');
 
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+  submitButton.addEventListener('click', function (event) {
+    event.preventDefault();
 
-        form.classList.add('was-validated');
-      }, false);
-    });
+    var form1 = document.getElementById('form1');
+    var form2 = document.getElementById('form2');
+
+    if (form1.checkValidity() && form2.checkValidity()) {
+      // Both forms are valid, submit them
+      submitForms(form1, form2);
+    } else {
+      // At least one form is invalid, handle validation errors
+      // You can add your validation error handling logic here
+      form1.classList.add('was-validated');
+      form2.classList.add('was-validated');
+    }
+  });
+
+  function submitForms(form1, form2) {
+    // You can customize this function to submit the forms using AJAX or any other method you prefer
+    // For demonstration, we are just logging the form data to the console
+    console.log('Submitting Form 1:', new FormData(form1));
+    console.log('Submitting Form 2:', new FormData(form2));
+  }
 })();
+
+
 
 //FOR LOG-IN
 
@@ -132,34 +146,34 @@ for (var i = 1900; i <= currentYear; i++) {
 }
 
 //FOR ANIMATION OF CLICKABLE BASIC INFORMATION / ACADEMIC BACKGROUND ETC..
-document.addEventListener("DOMContentLoaded", function() {
-  // Get all list items
-  var listItems = document.querySelectorAll('.list-group-item');
+ document.addEventListener("DOMContentLoaded", function() {
+      // Get all list items
+      var listItems = document.querySelectorAll('.list-group-item');
 
-  // Loop through each list item and add click event listener
-  listItems.forEach(function(listItem) {
-    listItem.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent default anchor link behavior
-      var targetId = this.getAttribute('href'); // Get the target tab pane ID from href attribute
-      var targetPane = document.querySelector(targetId); // Find the target tab pane
+      // Loop through each list item and add click event listener
+      listItems.forEach(function(listItem) {
+        listItem.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default anchor link behavior
+          var targetId = this.getAttribute('href'); // Get the target tab pane ID from href attribute
+          var targetPane = document.querySelector(targetId); // Find the target tab pane
 
-      // Toggle display of the target tab pane
-      if (targetPane.style.display === 'none' || targetPane.style.display === '') {
-        targetPane.style.display = 'block';
-      } else {
-        targetPane.style.display = 'none';
-      }
-      
-      // Remove the 'active' class from all list items
-      listItems.forEach(function(item) {
-        item.classList.remove('active');
+          // Toggle display of the target tab pane
+          if (targetPane.style.display === 'none' || targetPane.style.display === '') {
+            targetPane.style.display = 'block';
+          } else {
+            targetPane.style.display = 'none';
+          }
+          
+          // Remove the 'active' class from all list items
+          listItems.forEach(function(item) {
+            item.classList.remove('active');
+          });
+          
+          // Add 'active' class to the clicked list item
+          this.classList.add('active');
+        });
       });
-      
-      // Add 'active' class to the clicked list item
-      this.classList.add('active');
     });
-  });
-});
 //FOR PHONE NUMBER OF CONTACT PERSON
 document.getElementById('typePhone').addEventListener('input', function(event) {
   formatPhoneNumber(event.target);
