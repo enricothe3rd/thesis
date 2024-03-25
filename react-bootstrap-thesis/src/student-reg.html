@@ -21,8 +21,6 @@
 
 </style>
 <body>
-  <!-- <div class="container"> -->
-
   <div class="container">
     STUDENT REGISTRATION FORM
     <div class="row">
@@ -36,119 +34,272 @@
       <div class="col" id="gone">
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade " id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-
+<!-- START OF BASIC INFORMATION FORM -->
             <div class="container">
               <form class="row g-3 m-4 needs-validation" novalidate>
                 <div class="col-md-4">
-                  <label for="validationFirstName" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="validationFirstName" value="Mark" required>
+                  <label for="studentFirstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="studentFirstName" value="" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <label for="validationMiddleName" class="form-label">Middle name (optional)</label>
-                  <input type="text" class="form-control" id="validationMiddleName" value="Otto" required>
+                  <label for="studentMiddleName" class="form-label">Middle name (optional)</label>
+                  <input type="text" class="form-control" id="studentMiddleName" value="" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <label for="validationLastName" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="validationLastName" value="Otto" required>
+                  <label for="studentLastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="studentLastName" value="" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
-                <div class="col-lg-2 col-md-3">
-                  <label for="validationSuffix" class="form-label">Suffix (optional)</label>
-                  <select id="validationSuffix" class="form-select" aria-label="Default select example" required>
-                    <option selected disabled hidden></option>
-                    <option value="1">Jr</option>
-                    <option value="2">Sr</option>
-                    <option value="3">II</option>
-                    <option value="3">II</option>
-                    <option value="3">III</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please choose a suffix.
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <label for="validationGender" class="form-label">Gender</label>
-                  <select id="validationGender" class="form-select" aria-label="Default select example" required>
-                    <option selected disabled hidden></option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                    <option value="3">Other/Non-binary</option>
-                    <option value="3">Prefer not to say</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please choose a sex.
-                  </div>
-                </div>
-                
-                
-                
-                <div class="col-md-4">
-                  <label for="validationCustomUsername" class="form-label">Username</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="row mt-2">
+                  <div class="col-lg-2 col-md-3">
+                    <label for="studentSuffix" class="form-label">Suffix (optional)</label>
+                    <select id="studentSuffix" class="form-select" aria-label="Default select example" required>
+                      <option selected disabled hidden></option>
+                      <option value="1">Jr</option>
+                      <option value="2">Sr</option>
+                      <option value="3">II</option>
+                      <option value="4">III</option>
+                    </select>
                     <div class="invalid-feedback">
-                      Please choose a username.
+                      Please choose a suffix.
+                    </div>
+                  </div>
+                
+                  <div class="col-md-2">
+                    <label for="studentGender" class="form-label">Gender</label>
+                    <select id="studentGender" class="form-select" aria-label="Default select example" required>
+                      <option selected disabled hidden></option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Other/Non-binary</option>
+                      <option value="4">Prefer not to say</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please choose a gender.
+                    </div>
+                  </div>
+                
+                  <div class="col-lg-8 col-md-7">
+                    <label for="validationAge" class="form-label">Birth date</label>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <select class="form-select" aria-label="Default select example" id="date" required>
+                          <option value="">Select Date</option>
+                          <!-- Add your date options here -->
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid date.
+                        </div>
+                      </div>
+                  
+                      <div class="col-md-4">
+                        <select class="form-select" aria-label="Default select example" id="month" required>
+                          <option value="">Select Month</option>
+                            <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid month.
+                        </div>
+                      </div>
+                  
+                      <div class="col-md-4">
+                        <select class="form-select" aria-label="Default select example" id="year" required>
+                          <option value="">Select Year</option>
+                          <!-- Add your year options here -->
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid year.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+          <!-- PRESENT ADDRESS -->
+                <div class="pt-4">
+                  <label for=""><b>Present address</b></label>
+                </div>
+                <div class="col-md-12">
+                  <label for="studentStreetAddress" class="form-label">Street Address</label>
+                  <input type="text" class="form-control" id="studentStreetAddress" required>
+                  <div class="invalid-feedback">
+                    Please provide a Street Address.
+                  </div>
+                </div>
                 <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label">City</label>
-                  <input type="text" class="form-control" id="validationCustom03" required>
+                  <label for="studentCity" class="form-label">City</label>
+                  <input type="text" class="form-control" id="studentCity" required>
                   <div class="invalid-feedback">
-                    Please provide a valid city.
+                    Please provide a valid City.
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <label for="validationCustom04" class="form-label">State</label>
-                  <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>...</option>
-                  </select>
+                <div class="col-md-6">
+                  <label for="studentProvinceState" class="form-label">State / Province</label>
+                  <input type="text" class="form-control" id="studentProvinceState" required>
                   <div class="invalid-feedback">
-                    Please select a valid state.
+                    Please provide a valid State / Province.
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <label for="validationCustom05" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="col-md-6">
+                  <label for="studentCountry" class="form-label">Country</label>
+                  <input type="text" class="form-control" id="studentCountry" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Country.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentPostalZip" class="form-label">Postal / Zip Code</label>
+                  <input type="text" class="form-control" id="studentPostalZip" required>
                   <div class="invalid-feedback">
                     Please provide a valid zip.
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                      Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                      You must agree before submitting.
-                    </div>
+          <!-- CHECKBOX -->
+                <div class="pt-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label>
+                  Same as the present address
+                </label>
+              </div>
+            </div>
+            <!-- PERMANENT ADDRESS -->
+                <div class="pt-4">
+                  <label for=""><b>Permanent address</b></label>
+                </div>
+                <div class="col-md-12">
+                  <label for="studentStreetAddress" class="form-label">Street Address</label>
+                  <input type="text" class="form-control" id="studentStreetAddress" required>
+                  <div class="invalid-feedback">
+                    Please provide a Street Address.
                   </div>
                 </div>
-                <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
+                <div class="col-md-6">
+                  <label for="studentCity" class="form-label">City</label>
+                  <input type="text" class="form-control" id="studentCity" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid City.
+                  </div>
                 </div>
-              </form>
-            </div>
+                <div class="col-md-6">
+                  <label for="studentProvinceState" class="form-label">State / Province</label>
+                  <input type="text" class="form-control" id="studentProvinceState" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid State / Province.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentCountry" class="form-label">Country</label>
+                  <input type="text" class="form-control" id="studentCountry" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Country.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentPostalZip" class="form-label">Postal / Zip Code</label>
+                  <input type="text" class="form-control" id="studentPostalZip" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+          <!-- EMERGENCY CONTACT -->
+                <div class="pt-4">
+                  <label for=""><b>Emergency contact</b></label>
+                </div>
+                <div class="col-md-4">
+                  <label for="emergencyFirstName" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="emergencyFirstName" required>
+                  <div class="invalid-feedback">
+                    Please provide a first name.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="emergencyLastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="emergencyLastName" required>
+                  <div class="invalid-feedback">
+                    Please provide a first name.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="emergencyRelationship" class="form-label">Relationship</label>
+                  <input type="text" class="form-control" id="emergencyRelationship" required>
+                  <div class="invalid-feedback">
+                    Please provide a relationship ex. Father, Mother, etc..
+                  </div>
+                </div>
+                <div class="pt-4">
+                  <label for=""><b>Address Of Person To Contact In Case Of Emergency</b></label>
+                </div>
+                <div class="col-md-12">
+                  <label for="emergencyAddress" class="form-label">Street Address
+                  </label>
+                  <input type="text" class="form-control" id="emergencyAddress" required>
+                  <div class="invalid-feedback">
+                    Please provide a address.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentCity" class="form-label">City</label>
+                  <input type="text" class="form-control" id="studentCity" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid City.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentProvinceState" class="form-label">State / Province</label>
+                  <input type="text" class="form-control" id="studentProvinceState" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid State / Province.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="studentPostalZip" class="form-label">Postal / Zip Code</label>
+                  <input type="text" class="form-control" id="studentPostalZip" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="typePhone">Phone number</label>
+                  <input type="tel" id="typePhone" class="form-control" placeholder="XXX-XXXXXXX" required />
+                  <div class="invalid-feedback">
+                    Please provide a contact number.
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label for="studentPostalZip" class="form-label">Email Of Person To Contact In Case Of Emergency</label>
+                  <input type="email" class="form-control" id="studentPostalZip" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid email example@example.com.
+                  </div>
+                </div>
 
-
+              </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+<!-- END OF BASIC INFORMATION FORM -->
   
-  <div class="container">
+<!-- START OF ACADEMIC BACKGROUND FORM -->
     <div class="row">
       <div class="col">
         <div class="list-group" id="list-tab" role="tablist">
@@ -268,161 +419,15 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
  
 
 
 
 
-  <div class="container">
-    <form class="row g-3 m-4 needs-validation" novalidate>
-      <div class="col-md-4">
-        <label for="validationFirstName" class="form-label">First name</label>
-        <input type="text" class="form-control" id="validationFirstName" value="Mark" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="validationMiddleName" class="form-label">Middle name (optional)</label>
-        <input type="text" class="form-control" id="validationMiddleName" value="Otto" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4">
-        <label for="validationLastName" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="validationLastName" value="Otto" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="row mt-2">
-        <div class="col-lg-2 col-md-3">
-          <label for="validationSuffix" class="form-label">Suffix (optional)</label>
-          <select id="validationSuffix" class="form-select" aria-label="Default select example" required>
-            <option selected disabled hidden></option>
-            <option value="1">Jr</option>
-            <option value="2">Sr</option>
-            <option value="3">II</option>
-            <option value="4">III</option>
-          </select>
-          <div class="invalid-feedback">
-            Please choose a suffix.
-          </div>
-        </div>
-      
-        <div class="col-md-2">
-          <label for="validationGender" class="form-label">Gender</label>
-          <select id="validationGender" class="form-select" aria-label="Default select example" required>
-            <option selected disabled hidden></option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Other/Non-binary</option>
-            <option value="4">Prefer not to say</option>
-          </select>
-          <div class="invalid-feedback">
-            Please choose a gender.
-          </div>
-        </div>
-      
-        <div class="col-lg-8 col-md-7">
-          <label for="validationAge" class="form-label">Birth date</label>
-          <div class="row">
-            <div class="col-md-4">
-              <select class="form-select" aria-label="Default select example" id="date" required>
-                <option value="">Select Date</option>
-                <!-- Add your date options here -->
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid date.
-              </div>
-            </div>
-        
-            <div class="col-md-4">
-              <select class="form-select" aria-label="Default select example" id="month" required>
-                <option value="">Select Month</option>
-                  <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid month.
-              </div>
-            </div>
-        
-            <div class="col-md-4">
-              <select class="form-select" aria-label="Default select example" id="year" required>
-                <option value="">Select Year</option>
-                <!-- Add your year options here -->
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid year.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
 
-      <!-- <div class="col-md-4">
-        <label for="validationCustomUsername" class="form-label">Username</label>
-        <div class="input-group has-validation">
-          <span class="input-group-text" id="inputGroupPrepend">@</span>
-          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            Please choose a username.
-          </div>
-        </div>
-      </div> -->
-      <div class="col-md-11">
-        <label for="validationStreetAddress" class="form-label">Street Address</label>
-        <input type="text" class="form-control" id="validationStreetAddress" required>
-        <div class="invalid-feedback">
-          Please provide a Street Address.
-        </div>
-      </div>
-      <div class="col-md-6">
-        <label for="validationCity" class="form-label">City</label>
-        <input type="text" class="form-control" id="validationCity" required>
-        <div class="invalid-feedback">
-          Please provide a valid City.
-        </div>
-      </div>
-      <div class="col-md-6">
-        <label for="validationStateProvince" class="form-label">State / Province</label>
-        <input type="text" class="form-control" id="validationStateProvince" required>
-        <div class="invalid-feedback">
-          Please provide a valid State / Province.
-        </div>
-      </div>
-      <div class="col-md-3">
-        <label for="validationCustom04" class="form-label">State</label>
-        <select class="form-select" id="validationCustom04" required>
-          <option selected disabled value="">Choose...</option>
-          <option>...</option>
-        </select>
-        <div class="invalid-feedback">
-          Please select a valid state.
-        </div>
-      </div>
-      <div class="col-md-3">
-        <label for="validationCustom05" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="validationCustom05" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
-        </div>
-      </div>
-      <div class="col-12">
+<!-- SUMMITING AND TERMS AND CONDITIONS -->
+      <div class="col-12 pt-4">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
           <label class="form-check-label" for="invalidCheck">
@@ -438,38 +443,7 @@
       </div>
     </form>
   </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Get all list items
-      var listItems = document.querySelectorAll('.list-group-item');
-
-      // Loop through each list item and add click event listener
-      listItems.forEach(function(listItem) {
-        listItem.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent default anchor link behavior
-          var targetId = this.getAttribute('href'); // Get the target tab pane ID from href attribute
-          var targetPane = document.querySelector(targetId); // Find the target tab pane
-
-          // Toggle display of the target tab pane
-          if (targetPane.style.display === 'none' || targetPane.style.display === '') {
-            targetPane.style.display = 'block';
-          } else {
-            targetPane.style.display = 'none';
-          }
-          
-          // Remove the 'active' class from all list items
-          listItems.forEach(function(item) {
-            item.classList.remove('active');
-          });
-          
-          // Add 'active' class to the clicked list item
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
-    
-    
+</div>
 </body>
 <script src="code.js"></script>
 </html>

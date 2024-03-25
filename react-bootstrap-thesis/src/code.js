@@ -130,3 +130,49 @@ for (var i = 1900; i <= currentYear; i++) {
   option.value = i;
   yearDropdown.add(option);
 }
+
+//FOR ANIMATION OF CLICKABLE BASIC INFORMATION / ACADEMIC BACKGROUND ETC..
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all list items
+  var listItems = document.querySelectorAll('.list-group-item');
+
+  // Loop through each list item and add click event listener
+  listItems.forEach(function(listItem) {
+    listItem.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default anchor link behavior
+      var targetId = this.getAttribute('href'); // Get the target tab pane ID from href attribute
+      var targetPane = document.querySelector(targetId); // Find the target tab pane
+
+      // Toggle display of the target tab pane
+      if (targetPane.style.display === 'none' || targetPane.style.display === '') {
+        targetPane.style.display = 'block';
+      } else {
+        targetPane.style.display = 'none';
+      }
+      
+      // Remove the 'active' class from all list items
+      listItems.forEach(function(item) {
+        item.classList.remove('active');
+      });
+      
+      // Add 'active' class to the clicked list item
+      this.classList.add('active');
+    });
+  });
+});
+//FOR PHONE NUMBER OF CONTACT PERSON
+document.getElementById('typePhone').addEventListener('input', function(event) {
+  formatPhoneNumber(event.target);
+});
+
+function formatPhoneNumber(input) {
+  let phoneNumber = input.value.replace(/\D/g, '');
+  
+  if (phoneNumber.length === 10) { // Mobile number
+    phoneNumber = phoneNumber.replace(/(\d{3})(\d{7})/, '$1-$2');
+  } else if (phoneNumber.length === 7) { // Landline number
+    phoneNumber = phoneNumber.replace(/(\d{3})(\d{4})/, '$1-$2');
+  }
+  
+  input.value = phoneNumber;
+}
